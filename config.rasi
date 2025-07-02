@@ -1,0 +1,159 @@
+configuration {
+    modes: "drun,run,window";
+    font: "Iosevka Term 12";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    drun-display-format: "{icon} {name}";
+    combi-modes: "window,run,drun";
+    matching: "fuzzy";
+    cycle: true;
+    sort: true;
+}
+
+* {
+    spacing: 4;
+    border: 0;              // no border on all elements by default
+    padding: 6px 10px;
+    background: #1D2021;    // Gruvbox bg0 dark
+    foreground: #ebdbb2;    // Gruvbox fg light
+
+    border-color: transparent;
+    separatorcolor: #504945;
+
+    normal-foreground: #ebdbb2;
+    normal-background: #282828;
+
+    active-foreground: #fabd2f;
+    active-background: #3c3836;
+
+    urgent-foreground: #fb4934;
+    urgent-background: #3c3836;
+
+    selected-normal-foreground: #282828;
+    selected-normal-background: transparent;
+
+    selected-active-foreground: #282828;
+    selected-active-background: transparent;
+
+    selected-urgent-foreground: #282828;
+    selected-urgent-background: transparent;
+
+    alternate-normal-background: #1d2021;
+    alternate-normal-foreground: #ebdbb2;
+
+    highlight: underline #fe8019;
+}
+
+window {
+    background-color: #1D2021;
+    border: 1px;
+    border-color: #504945;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+mainbox {
+    border: 0;
+    padding: 0;
+}
+
+textbox {
+    text-color: #ebdbb2;
+    font: "Iosevka Term 12";
+    background-color: transparent;
+    padding: 0 4px;
+}
+
+listview {
+    fixed-height: 0;
+    border: 0;
+    spacing: 6px;
+    scrollbar: true;
+    padding: 4px 8px;
+    background-color: transparent;
+}
+
+element {
+    border-radius: 6px;
+    padding: 6px 12px;
+    background-color: transparent;
+    text-color: #ebdbb2;
+    border: 0;
+}
+
+element normal.normal {
+    background-color: #282828;
+    text-color: #ebdbb2;
+    border: 0;
+}
+
+element normal.active {
+    background-color: #3c3836;
+    text-color: #fabd2f;
+    border: 0;
+}
+
+element selected.normal {
+    background-color: transparent;
+    border: 2px;
+    border-color: #fabd2f;
+    text-color: #fabd2f;
+}
+
+element selected.active {
+    background-color: transparent;
+    border: 2px;
+    border-color: #d79921;
+    text-color: #d79921;
+}
+
+element-text {
+    highlight: underline #fe8019;
+}
+
+scrollbar {
+    width: 6px;
+    handle-color: #665c54;   // Gruvbox soft brown
+    border-radius: 4px;
+}
+
+inputbar {
+    spacing: 0px;
+    text-color: #ebdbb2;
+    background-color: #1d2021;
+    padding: 6px 10px;
+    border-radius: 8px;
+    children: [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+
+prompt {
+    text-color: #fabd2f;
+}
+
+textbox-prompt-colon {
+    str: ":";
+    text-color: inherit;
+    margin: 0px 0.4em 0px 0px;
+}
+
+entry {
+    text-color: #ebdbb2;
+    background-color: #3c3836;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor-width: 1ch;
+}
+
+case-indicator {
+    text-color: #fe8019;
+}
+
+button {
+    text-color: #ebdbb2;
+    background-color: transparent;
+}
+
+button selected {
+    background-color: #1d2021;
+    text-color: #fabd2f;
+}

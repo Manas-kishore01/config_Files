@@ -1,0 +1,76 @@
+* {
+    font: "JetBrains Mono 12";
+    text-color: #ebdbb2;
+    background-color: #1d2021;
+    border-color: #3c3836;
+
+    selected-normal-foreground: #1d2021;
+    selected-normal-background: #fe8019;
+}
+
+window {
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 30%;
+    padding: 10px;
+    border: 2px;
+    border-color: @border-color;
+    background-color: @background-color;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    spacing: 10px;
+    background-color: inherit;
+}
+
+inputbar {
+    padding: 5px;
+    children: [prompt, textbox-prompt-colon, entry];
+    background-color: @background-color;
+    text-color: @text-color;
+    border: 1px;
+    border-color: @border-color;
+}
+
+prompt {
+    text-color: @text-color;
+}
+
+textbox-prompt-colon {
+    text-color: @text-color;
+}
+
+entry {
+    text-color: @text-color;
+    background-color: @background-color;
+}
+
+listview {
+    lines: 6;
+    fixed-height: false;
+    spacing: 5px;
+    scrollbar: false;
+    background-color: @background-color;
+    padding: 0;
+}
+
+element {
+    background-color: transparent;
+    text-color: @text-color;
+    padding: 8px;
+}
+
+element selected {
+    background-color: transparent;
+    border: 2px;
+    border-color: #fe8019;
+    border-radius: 4px;
+    text-color: #fe8019;
+    padding-left: 30px;
+}
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
